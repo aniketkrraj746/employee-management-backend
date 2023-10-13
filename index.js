@@ -31,7 +31,7 @@ app.listen(PORT, () => {
 dbConnect();
 
 app.get("/", (req, res) => {
-  res.send(`<h1>Backend is Running and this is '/' Route</h1>`);
+  res.send(`<h1>Backend is Running and this is '/' Ro ute</h1>`);
 });
 app.get("/abcd",(req,res)=>{
   res.send(`<p>aniket</p>`);
