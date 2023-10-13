@@ -4,6 +4,7 @@ exports.getUser = async (req, res) => {
     const userData = await User.find({});
     res.json({ success: true, data: userData });
   } catch (error) {
+    res.send(`<p>/getUsers is not working</p>`);
     res.status(500).json({ success: false, error: error });
   }
 };
