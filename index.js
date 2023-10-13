@@ -4,7 +4,7 @@ const dbConnect = require("./config/database");
 const userRoutes = require("./routes/user");
 const app = express();
 var cors = require("cors");
-const path = require("path")
+const path = require("path");
 const PORT = process.env.PORT || 4000;
 
 app.use(
@@ -15,12 +15,12 @@ app.use(
 // Middleware
 app.use(express.json());
 
-app.use("", userRoutes); 
+app.use("", userRoutes);
 
 // static files
-app.use(express.static(path.join(__dirname,"../frontend/build")))
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.get((req, res) => {
-  res.sendFile(path.join(__dirname,"../frontend/build/index.html"))
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 });
 
 // CORS Configuration
@@ -33,6 +33,6 @@ dbConnect();
 app.get("/", (req, res) => {
   res.send(`<h1>Backend is Running and this is '/' Ro ute</h1>`);
 });
-app.get("/abcd",(req,res)=>{
+app.get("/abcd", (req, res) => {
   res.send(`<p>aniket</p>`);
 });
