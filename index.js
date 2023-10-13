@@ -15,7 +15,7 @@ app.use(
 // Middleware
 app.use(express.json());
 
-app.use("/", userRoutes);
+app.use("", userRoutes); 
 
 // static files
 app.use(express.static(path.join(__dirname,"../frontend/build")))
