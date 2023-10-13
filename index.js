@@ -34,5 +34,6 @@ app.get("/", (req, res) => {
   res.send(`<h1>Backend is Running and this is '/' Ro ute</h1>`);
 });
 app.get("/abcd",(req,res)=>{
+  console.log("this is working")
   res.send(`<p>aniket</p>`);
 });
